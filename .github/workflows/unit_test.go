@@ -2,7 +2,7 @@ package test
 
 import (
 	"fmt"
-	"strings"
+	"path"
 	"os"
 	"testing"
 	"time"
@@ -16,7 +16,7 @@ import (
 // temp folders so that the state files and .terraform folders don't clash
 func ConfigApp(t *testing.T) *terraform.Options {
 	return &terraform.Options{
-		TerraformDir: "../",
+		TerraformDir: "../../",
 	}
 }
 
@@ -31,12 +31,7 @@ func TestApiTest(t *testing.T) {
 
 	// Print the current working directory
 	fmt.Printf("Current Working Directory: %s", cwd)
-	filePath := cwd
-
-	upTwoLevels := filePath.Join(cwd, "..", "..")
-
-	// Print the resulting directory path
-	fmt.Printf(" Directory two levels up: %s", upTwoLevels)
+	fmt.Println(path.Join(cwd, "..", ".."))
 
 	t.Parallel()
 
