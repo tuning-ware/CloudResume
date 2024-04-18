@@ -30,11 +30,11 @@ jobs:
         
         - name: Install Dependencies
           run: go mod download
-          working-directory: ../.github/workflows
+          working-directory: ./.github/workflows
         
         - name: Build
           run: go build -o test
-          working-directory: ../.github/workflows
+          working-directory: ./.github/workflows
 
         - name: Configure AWS Credentials
           uses: aws-actions/configure-aws-credentials@v4
@@ -47,7 +47,7 @@ jobs:
 
         - name: run test
           run: go test -v -timeout 30m unit_test.go || exit 1
-          working-directory: ../.github/workflows
+          working-directory: ./.github/workflows
           
   #  cypress-run:
   #    runs-on: ubuntu-latest
