@@ -2,6 +2,7 @@ package test
 
 import (
 	"fmt"
+	"strings"
 	"os"
 	"testing"
 	"time"
