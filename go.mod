@@ -1,6 +1,6 @@
 module github.com/tuning-ware/CloudResume
 
-go 1.22.1
+go 1.22
 
 require github.com/gruntwork-io/terratest v0.46.11
 
