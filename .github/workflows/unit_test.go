@@ -36,6 +36,8 @@ func TestApiTest(t *testing.T) {
 	fmt.Printf("\ntmpFolder:")
 	fmt.Printf(path.Join(cwd, "..", "..", "tmp"))
 
+	tmpFolder := path.Join(cwd, "..", "..", "tmp")
+
 	t.Parallel()
 
 	// A unique ID we can use to namespace all our resource names and ensure they don't clash across parallel tests
@@ -49,7 +51,7 @@ func TestApiTest(t *testing.T) {
 
 	// Copy terraform folder to temp folder for parallel testing
 	// func CopyTerraformFolderToTemp(t testing.TestingT, rootFolder string, terraformModuleFolder string) string
-	appPath := test_structure.CopyTerraformFolderToTemp(t, "../../", "/tmp")
+	appPath := test_structure.CopyTerraformFolderToTemp(t, "../../", tmpFolder)
 	
 	// At the end of the test, run `terraform destroy` to clean up any resources that were created
 	// defer terraform.Destroy(t, terraformOptions)
