@@ -1,7 +1,8 @@
 package test
 
 import (
-	// "fmt"
+	"fmt"
+	"os"
 	"testing"
 	"time"
 	http_helper "github.com/gruntwork-io/terratest/modules/http-helper"
@@ -19,6 +20,16 @@ func ConfigApp(t *testing.T) *terraform.Options {
 }
 
 func TestApiTest(t *testing.T) {
+
+	// Get the current working directory
+	cwd, err := os.Getwd()
+	if err != nil {
+		fmt.Println("Error:", err)
+		return
+	}
+
+	// Print the current working directory
+	fmt.Println("Current Working Directory:", cwd)
 
 	t.Parallel()
 
