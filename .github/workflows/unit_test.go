@@ -33,7 +33,7 @@ func TestApiTest(t *testing.T) {
 
 	// Copy terraform folder to temp folder for parallel testing
 	// func CopyTerraformFolderToTemp(t testing.TestingT, rootFolder string, terraformModuleFolder string) string
-	appPath := test_structure.CopyTerraformFolderToTemp(t, "../", "/tempfolder",)
+	appPath := test_structure.CopyTerraformFolderToTemp(t, "../", "/temp",)
 	
 	// At the end of the test, run `terraform destroy` to clean up any resources that were created
 	// defer terraform.Destroy(t, terraformOptions)
