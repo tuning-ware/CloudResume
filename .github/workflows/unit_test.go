@@ -30,8 +30,9 @@ func TestApiTest(t *testing.T) {
 	}
 
 	// Print the current working directory
-	fmt.Printf("Current Working Directory: %s", cwd)
-	fmt.Println(path.Join(cwd, "..", ".."))
+	fmt.Printf("Current Working Directory: %s\n", cwd)
+	fmt.Printf("twoLevelsAbove:", path.Join(cwd, "..", ".."))
+	fmt.Printf("tmpFolder:", path.Join(cwd, "..", "..", "tmp"))
 
 	t.Parallel()
 
