@@ -55,6 +55,7 @@ func TestApiTest(t *testing.T) {
 	// defer terraform.Destroy(t, terraformOptions)
 
 	defer test_structure.RunTestStage(t, "cleanup_app", func() {
+		// envVarName := fmt.Sprintf("%s%s", SKIP_STAGE_ENV_VAR_PREFIX, stageName)
 		appOpts := test_structure.LoadTerraformOptions(t, appPath)
 		terraform.Destroy(t, appOpts)
 	})
@@ -63,6 +64,7 @@ func TestApiTest(t *testing.T) {
 	// terraform.InitAndApply(t, terraformOptions)
 	// Deploy the web-service module
 	test_structure.RunTestStage(t, "deploy_app", func() {
+		// envVarName := fmt.Sprintf("%s%s", SKIP_STAGE_ENV_VAR_PREFIX, stageName)
 		appOpts := terraformOptions
 		test_structure.SaveTerraformOptions(t, appPath, appOpts)
 		terraform.InitAndApply(t, appOpts)
