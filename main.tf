@@ -1,4 +1,4 @@
-# DynamoDB table
+# DynamoDB tables
 resource "aws_dynamodb_table" "visitor-count-table" {
   name           = "visitor-count-table"
   billing_mode   = "PROVISIONED"
