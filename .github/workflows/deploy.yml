@@ -33,7 +33,7 @@ jobs:
           working-directory: ./.github/workflows
         
         - name: Build
-          run: go build -o test 
+          run: go build ./... 
           working-directory: ./.github/workflows
 
         - name: Configure AWS Credentials
