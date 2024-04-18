@@ -29,7 +29,7 @@ func TestApiTest(t *testing.T) {
 	}
 
 	// Print the current working directory
-	fmt.Println("Current Working Directory:", cwd)
+	fmt.Printf("Current Working Directory: %s", cwd)
 
 	t.Parallel()
 
