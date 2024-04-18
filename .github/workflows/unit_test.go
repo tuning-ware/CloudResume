@@ -31,6 +31,9 @@ func TestApiTest(t *testing.T) {
 	// Print the current working directory
 	fmt.Printf("Current Working Directory: %s", cwd)
 
+	rootFolder := "../../"
+	fmt.Printf("rootFolder: %s", rootFolder)
+
 	t.Parallel()
 
 	// A unique ID we can use to namespace all our resource names and ensure they don't clash across parallel tests
