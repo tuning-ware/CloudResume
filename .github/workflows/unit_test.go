@@ -36,8 +36,6 @@ func TestApiTest(t *testing.T) {
 	fmt.Printf("\ntmpFolder:")
 	fmt.Printf(path.Join(cwd, "..", "..", "tmp"))
 
-	tmpFolder := path.Join(cwd, "..", "..", "tmp")
-
 	t.Parallel()
 
 	// A unique ID we can use to namespace all our resource names and ensure they don't clash across parallel tests
