@@ -1,3 +1,3 @@
 module github.com/tuning-ware/CloudResume
 
-go 1.22.1
+go 1.23
